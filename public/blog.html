@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+      integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/utility.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/blog.css" />
+
+    <title>NSU Utility Website</title>
+  </head>
+  <body class="body-height">
+    <!-- Navbar -->
+    <nav id="head-nav" class="navbar navbar-expand-lg bg-nsu py-2 fixed-top">
+      <div class="container justify-content-between">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div>
+          <a href="#" class="navbar-brand text-light">NSU</a>
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+          <ul class="navbar-nav nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-index text-light">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="buysell.html" class="nav-index text-light">Buy & Sell</a>
+            </li>
+            <li class="nav-item">
+              <a href="lostfound.html" class="nav-index text-light"
+                >Lost & Found</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="blog.html" class="nav-index text-light">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <button id="signInButton">Sign In</button>
+            </li>
+            <li class="nav-item">
+              <button id="signOutButton">Sign Out</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog -->
+    <div class="container">
+      <div class="row mt-n5">
+        <div
+          class="col-md-6 col-lg-4 mt-5 wow fadeInUp"
+          data-wow-delay=".2s"
+          style="
+            visibility: visible;
+            animation-delay: 0.2s;
+            animation-name: fadeInUp;
+          "
+        >
+          <div class="blog-grid">
+            <div class="blog-grid-img position-relative">
+              <img
+                alt="img"
+                src="https://www.bootdey.com/image/480x480/1B1852/FFFFFF"
+              />
+            </div>
+            <div class="blog-grid-text p-4">
+              <h3 class="h5 mb-3">
+                <a href="#!">Business tool for your customer</a>
+              </h3>
+              <p class="display-30">
+                Exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+              </p>
+              <div class="meta meta-style2">
+                <ul>
+                  <li>
+                    <a href="#!"
+                      ><i class="fas fa-calendar-alt"></i> 10 Jul,
+                      <script>
+                        document.write(new Date().getFullYear());
+                      </script>
+                      2022</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#!"><i class="fas fa-user"></i> User</a>
+                  </li>
+                  <li>
+                    <a href="#!"><i class="fas fa-comments"></i> 38</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="p-2 bg-nsu-tertiary text-light text-center">
+      <div class="container">
+        <p class="lead">
+          Copyright &copy; Nizam Uddin Khan Ridoy | ID: 1822019042 | Group: Maze
+          Overflow, 2023 All Rights Reserved
+        </p>
+
+        <a
+          href="#"
+          class="to-top d-none d-sm-block position-fixed py-2 px-3 bottom-0 end-0"
+        >
+          <i class="bi bi-arrow-up-circle h1 text-dark"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./script/script.js"></script>
+    <script type="module" src="./script/auth.js"></script>
+  </body>
+</html>
