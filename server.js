@@ -15,19 +15,19 @@ app.get('/', (req, res) => {
 // upload link
 app.post('/upload', (req, res) => {
   let file = req.files.image;
-  let date = new Date();
   // image name
-  let imagename = date.getDate() + date.getTime() + file.name;
+  let imagename = req.body.filename;
   // image upload path
   let path = 'public/uploads/' + imagename;
 
   // create upload
   file.mv(path, (err, result) => {
     if (err) {
+      res.status(500)
       throw err;
     } else {
       // our image upload path
-      res.json(`uploads/${imagename}`);
+      res.status(200).send({path: `uploads/${imagename}`});
     }
   });
 });

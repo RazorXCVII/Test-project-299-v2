@@ -13,7 +13,6 @@ let productImagePath;
 const showForm = () => {
   if (postForm.classList.contains('hidden')) {
     postForm.classList.remove('hidden');
-    console.log('Hello');
     postButton.innerHTML = 'Cancel';
   } else {
     postForm.classList.add('hidden');
@@ -21,33 +20,28 @@ const showForm = () => {
   }
 };
 
-const uploadImage = (uploadFile, uploadType) => {
+const uploadImage = (uploadFile, productName) => {
   const [file] = uploadFile.files;
   if (file && file.type.includes('image')) {
     const formdata = new FormData();
     formdata.append('image', file);
+    formdata.append('filename', productName)
 
     fetch('http://localhost:3000/upload', {
       method: 'post',
       body: formdata,
     })
-      .then((res) => res.json())
-      .then((data) => {
-        if (uploadType == 'image') {
-          addImage(data, file.name);
-        } else {
-          bannerPath = `${location.origin}/${data}`;
-          banner.style.backgroundImage = `url("${bannerPath}")`;
-        }
-      });
-    console.log('Puta madre');
+      .then((res) => { return res.json()})
+      .then((data) => { console.log(data)});
   } else {
     alert('upload Image only');
   }
 };
 
-postSubmit.addEventListener('click', () => {
-  uploadImage(productImage, 'image');
+postSubmit.addEventListener('click', (e) => {
+  e.preventDefault();
+  path = uploadImage(productImage, productName.value);
+  console.log(path);
 });
 
 postButton.addEventListener('click', showForm);
